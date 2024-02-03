@@ -1,0 +1,61 @@
+
+
+.img-indi{
+    overflow-x: scroll;
+}
+
+.img-indi button{
+  border: none;
+  padding: 5px;
+}
+.img-indi::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none!important;
+    background-color: transparent;
+    height: 3px;
+    width: 25px;
+    margin: 10px 0;
+    position: relative;
+    transition: all 0.35s ease-out;
+    transform-origin: center;
+  }
+  
+  .navbar-toggler-icon::before {
+    display: block;
+    background-color: white;
+    height: 3px;
+    content: "";
+    position: relative;
+    top: 5px;
+    transition: all 0.15s ease-out;/*taken down to hide quicker*/
+    transform-origin: center;
+  }
+  
+  .navbar-toggler-icon::after {
+    display: block;
+    background-color: white;
+    height: 3px;
+    content: "";
+    position: relative;
+    top: 18px;
+    transition: all 0.35s ease-out;
+    transform-origin: center;
+  }
+  
+  .navbar-dark .navbar-toggler-icon,
+  .navbar-dark .navbar-toggler-icon::before,
+  .navbar-dark .navbar-toggler-icon::after {
+    background-color: white;
+  }
+
+.about_card{
+  margin-left: 0px;
+}
+  @media screen and (min-width: 993px) {
+    .about_card{
+      margin-left: -100px;
+    }
+  }
