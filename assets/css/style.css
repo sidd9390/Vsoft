@@ -59,3 +59,20 @@
       margin-left: -100px;
     }
   }
+
+/* Custom CSS for responsive design and equal card heights */
+.card {
+  height: 100%;
+  align-items: normal;
+  /* Add this line */
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .row {
+    flex-wrap: nowrap;
+  }
+
+  .carousel-inner .col-md-4 {
+    flex: 0 0 100%;
+  }
+}
