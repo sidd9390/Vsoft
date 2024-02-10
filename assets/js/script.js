@@ -36,7 +36,7 @@ let btnRight = document.getElementById("btnright");
 scrollContainer.addEventListener("wheel", (evt) =>{
     evt.preventDefault();
     scrollContainer.scrollLeft += evt.deltaY;
-    scrollContainer.style.scrollBehavior ="auto";
+    scrollContainer.style.scrollBehavior = "auto";
 })
 btnRight.addEventListener("click",()=>{
     scrollContainer.style.scrollBehavior ="smooth";
