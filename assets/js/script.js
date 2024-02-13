@@ -46,4 +46,9 @@ btnLeft.addEventListener("click",()=>{
     scrollContainer.style.scrollBehavior ="smooth";
     scrollContainer.scrollLeft -= 280
 })
+document.addEventListener('DOMContentLoaded', function () {
+    var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
+        interval: false // Set interval to false to prevent auto-sliding
+    });
+});
 

@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1"
-      style="background-color: #042f63;">
+      style="background-color: #042f63; position: fixed; z-index: 10; width: 100%;">
       <div class="container m-0">
         <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
     </nav>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       
-        <div class="carousel-indicators p-1 mb-2 m-0" style="background: rgba( 0, 0, 0, 0.75 );">
+        <div class="carousel-indicators p-1 mb-5 ms-0 w-100" style="background: rgba( 0, 0, 0, 0.75 );">
           <button type="button" data-bs-target="#carouselExampleIndicators" id="button1" data-bs-slide-to="0" class="active d-none" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" id="button2" data-bs-slide-to="1" class="d-none" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" id="button3" data-bs-slide-to="2" class="d-none" aria-label="Slide 3"></button>
@@ -60,59 +60,73 @@
             <i id="btnleft" style="cursor: pointer; color: #92c1fa; font-size: 40px;" class="fa-solid fa-caret-left"></i>
           </div>-
           <div class="img-indi d-flex">
-            <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px;" class="pe-2" alt="">
-              <h1 class="fs-5 fw-light" style="color: white;">Home</h1>
+            <a  style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
             </button>
-            <a style="text-decoration: none;" href="./arya.html"><button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            </a>
+            <a  style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
-            </button></a>
-            <a style="text-decoration: none;" href="./roots.html">
-              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./vantage.html">
-              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                class="me-2" alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./bolt.html">
-              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./nest.html">
-              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./waves.html">
-              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./watch.html">
-              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./hive.html">
-              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-              style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 6.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
             </button>
             </a>
-            <a style="text-decoration: none;" href="./wings.html">
-              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1" style="background: rgba(0, 0, 0, 0);"><img
-                src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+            <a  style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
               <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
             </button>
             </a>
@@ -129,7 +143,7 @@
               <div class="row d-flex justify-content-center">
                   <div class="col-lg-8 col-12 text-center">
                     <img src="./assets/Images/Logo Proper.png" class="img-fluid mb-5" style="width: 500px;" alt="">
-                    <h1 class="display-6 pt-3">Mission</h1>
+                    <h1 class="display-6 pt-1">Mission</h1>
                     <p class="ps-1 pe-1" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                       the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
                       type and scrambled it to make a type specimen book. It has survived not only five centuries, but also

@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63;">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63; position: fixed; z-index: 10; width: 100%;">
         <div class="container m-0">
             <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -57,7 +57,7 @@
     </nav>
     <div id="carouselExampleIndicators" class="carousel slide">
 
-        <div class="carousel-indicators p-1 m-0" style="background: rgba( 0, 0, 0, 0.75 );">
+        <div class="carousel-indicators p-1 mb-5 ms-0 w-100" style="background: rgba( 0, 0, 0, 0.75 );">
             <button type="button" data-bs-target="#carouselExampleIndicators" id="button1" data-bs-slide-to="0"
                 class="active d-none" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" id="button2" data-bs-slide-to="1"
@@ -83,46 +83,76 @@
                     class="fa-solid fa-caret-left"></i>
             </div>
             <div class="img-indi d-flex">
-                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                <a  style="text-decoration: none;" href="./index.html">
+                  <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
                 </button>
-                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./arya.html">
+                  <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
                 </button>
-                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./roots.html">
+                  <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
                 </button>
-                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./vantage.html">
+                  <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                    class="me-2" alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
                 </button>
-                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./Bolt.html">
+                  <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
                 </button>
-                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./nest.html">
+                  <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
                 </button>
-                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./waves.html">
+                  <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
                 </button>
-                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./watch.html">
+                  <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
                 </button>
-                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 6.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./hive.html">
+                  <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
                 </button>
-                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1" style="background: rgba(0, 0, 0, 0);"><img
-                    src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./wings.html">
+                  <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
                 </button>
+                </a>
               </div>
             <div class="navi text-center d-flex align-items-center pe-3 ps-3">
                 <i id="btnright" style="cursor: pointer; color: #92c1fa; font-size: 40px;"
@@ -179,8 +209,8 @@
               <div class="overlay_text">
                 <div class="row d-flex justify-content-center">
                   <div class="col-8 text-center">
-                    <a href="./bolt.html">
-                      <img src="./assets/Images/bolt.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    <a href="./Bolt.html">
+                      <img src="./assets/Images/Bolt.png" class="img-fluid res_image" style="width: 500px;" alt="">
                     </a>
                   </div>
                 </div>
@@ -249,7 +279,7 @@
     <section class="Details pt-3 pb-3" id="Details" style="background-color: #ecf0f5;">
         <div class="container">
             <div class="row">
-                <h2 class="display-4  text-start pb-3" style="color: #5e5e5e;">Advanced ATM Software</h2>
+                <h2 class="display-4  text-center mt-3" style="color: #5e5e5e;">Advanced ATM Software</h2>
                 <div class="col-lg-6 col-12 p-4">
                     <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
                         voluptates sequi nisi
@@ -309,42 +339,17 @@
                                                     <img src="./assets/Images/blogo_1.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-2" style="color: #5e5e5e;">
-                                                        Empowering Indian Banking Market</h4>
-                                                    <p class="card-text" style="text-align: justify;">Welcome to BOLT,
-                                                        the cutting-edge ATM software designed specifically for the
-                                                        Indian banking market. Our comprehensive solution offers a
-                                                        seamless and secure banking experience to customers while
-                                                        enabling banks to streamline their operations and
-                                                        deliver exceptional service.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5 m-4 card p-0"
-                                                style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-                                                <div class="mt-3 text-center">
-                                                    <img src="./assets/Images/blogo_1.png" class="img-fluid"
-                                                        style="width: 100px;" alt="">
-                                                </div>
-
-                                                <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: white;">
-                                                        Empowering Indian Banking Market</h4>
-                                                    <p class="card-text" style="text-align: justify;"> With BOLT, revolutionize your ATM
-                                                        network and stay ahead in the digital era. Bolt is part of NFS,
-                                                        a shared ATM network, that interconnects various Bank networks
-                                                        in India. The basic transaction types: cash withdrawal, balance
-                                                        enquiry, pin change and mini statement are supported by Bolt. In
-                                                        addition to card transactions at ATMs, Bolt also supports Card
-                                                        plus PIN transactions on Micro-ATMs.
+                                                        Empowering indian banking market</h4>
+                                                    <p class="card-text" style="text-align: justify;">"Bolt is advanced ATM software for the Indian banking market, offering seamless banking experiences while optimizing bank operations. It's part of NFS, a shared ATM network in India, supporting key transactions like cash withdrawal, balance enquiry, pin change, and mini statements, including Card plus PIN transactions on Micro-ATMs."
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -352,10 +357,10 @@
                                                     <img src="./assets/Images/blogo2.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Enhanced Security </h4>
-                                                    <p class="card-text" style="text-align: justify;">BOLT incorporates
+                                                        Enhanced security </h4>
+                                                    <p class="card-text" style="text-align: justify;">Bolt incorporates
                                                         advanced security protocols to protect against fraud and cyber
                                                         threats, ensuring the safety of customer transactions and
                                                         sensitive data.
@@ -370,9 +375,9 @@
                                                 </div>
                                                 <div class="card-body p-4">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Multi-language Support </h4>
+                                                        Multi-language support </h4>
                                                     <p class="card-text" style="text-align: justify;">Cater to the
-                                                        diverse Indian population with BOLT's multi-language support,
+                                                        diverse Indian population with Bolt's multi-language support,
                                                         providing customers the option to interact with ATMs in their
                                                         preferred language.
                                                     </p>
@@ -381,7 +386,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -389,9 +394,9 @@
                                                     <img src="./assets/Images/blogo4.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Customizable User Interface </h4>
+                                                        Customizable user interface </h4>
                                                     <p class="card-text" style="text-align: justify;">Tailor the ATM
                                                         interface to reflect your bank's branding and deliver a
                                                         consistent experience across your network.
@@ -406,7 +411,7 @@
                                                 </div>
                                                 <div class="card-body p-4">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Transaction Monitoring and Alerts </h4>
+                                                        Transaction monitoring and alerts </h4>
                                                     <p class="card-text" style="text-align: justify;">Gain real-time
                                                         visibility into ATM transactions and receive instant alerts for
                                                         any suspicious activities, enabling proactive risk management.
@@ -416,7 +421,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits </h2>
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -424,10 +429,10 @@
                                                     <img src="./assets/Images/blogo6.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Seamless Integration</h4>
-                                                    <p class="card-text" style="text-align: justify;">BOLT seamlessly
+                                                        Seamless integration</h4>
+                                                    <p class="card-text" style="text-align: justify;">Bolt seamlessly
                                                         integrates with existing banking systems, minimizing disruption
                                                         during implementation and ensuring a smooth transition.
                                                     </p>
@@ -437,7 +442,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 text-center">BOLT Modules </h2>
+                                        <h2 class="mb-3 display-6 text-center">Bolt modules </h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -445,9 +450,9 @@
                                                     <img src="./assets/Images/blogo7.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">ATM
-                                                        Management </h4>
+                                                        management </h4>
                                                     <p class="card-text" style="text-align: justify;">Streamline ATM
                                                         monitoring, cash management, and maintenance processes through a
                                                         centralized control system, reducing downtime and optimizing
@@ -464,7 +469,7 @@
                                                 </div>
                                                 <div class="card-body p-4">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">Card
-                                                        Management </h4>
+                                                        management </h4>
                                                     <p class="card-text" style="text-align: justify;">Efficiently manage
                                                         card issuance, activation, and PIN management, ensuring a secure
                                                         and seamless experience for cardholders.
@@ -474,7 +479,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 text-center">BOLT Modules </h2>
+                                        <h2 class="mb-3 display-6 text-center">Bolt modules </h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -482,9 +487,9 @@
                                                     <img src="./assets/Images/blogo9.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Transaction Processing </h4>
+                                                        Transaction processing </h4>
                                                     <p class="card-text" style="text-align: justify;">Enable a wide
                                                         range of transaction types, including cash withdrawals,
                                                         deposits, balance inquiries, fund transfers, bill payments, and
@@ -500,7 +505,7 @@
                                                 </div>
                                                 <div class="card-body p-4">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">Fraud
-                                                        Prevention </h4>
+                                                        prevention </h4>
                                                     <p class="card-text" style="text-align: justify;">Implement advanced
                                                         fraud detection mechanisms to identify and prevent various types
                                                         of ATM frauds, protecting both customers and the bank.
@@ -510,7 +515,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 text-center">BOLT Modules </h2>
+                                        <h2 class="mb-3 display-6 text-center">Bolt modules </h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #5e5e5e; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -518,9 +523,9 @@
                                                     <img src="./assets/Images/blogo11.png" class="img-fluid"
                                                         style="width: 100px;" alt="">
                                                 </div>
-                                                <div class="card-body p-4" style="height: 350px;">
+                                                <div class="card-body p-4" style="height: 400px;">
                                                     <h4 class="card-title display-6 fs-3" style="color: #5e5e5e;">
-                                                        Reports and Analytics </h4>
+                                                        Reports and analytics </h4>
                                                     <p class="card-text" style="text-align: justify;">Access
                                                         comprehensive reports and analytics to gain valuable insights
                                                         into ATM performance, customer behavior, and transaction trends,
@@ -560,12 +565,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <h2 class="display-4 text-start pb-3" style="color: #5e5e5e;">Unleash the Power of BOLT </h2>
+                        <h2 class="display-4 text-start pt-3" style="color: #5e5e5e;">Unleash the power of Bolt </h2>
                         <div class="col-lg-12 col-12 p-4">
-                            <p style="text-align: justify;">Join leading banks across India in embracing BOLT and
+                            <p style="text-align: justify;">Join leading banks across India in embracing Bolt and
                                 revolutionize your ATM network. Deliver an exceptional banking experience to your
                                 customers while optimizing operational efficiency. Contact us today to learn more about
-                                BOLT and how it can transform your bank's ATM services.
+                                Bolt and how it can transform your bank's ATM services.
 
                             </p>
                         </div>
