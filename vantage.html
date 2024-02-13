@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63;">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63; position: fixed; z-index: 10; width: 100%;">
         <div class="container m-0">
             <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -57,7 +57,7 @@
     </nav>
     <div id="carouselExampleIndicators" class="carousel slide">
 
-        <div class="carousel-indicators p-1 m-0" style="background: rgba( 0, 0, 0, 0.75 );">
+        <div class="carousel-indicators p-1 mb-5 ms-0 w-100" style="background: rgba( 0, 0, 0, 0.75 );">
             <button type="button" data-bs-target="#carouselExampleIndicators" id="button1" data-bs-slide-to="0"
                 class="active d-none" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" id="button2" data-bs-slide-to="1"
@@ -83,46 +83,76 @@
                     class="fa-solid fa-caret-left"></i>
             </div>
             <div class="img-indi d-flex">
-                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                <a  style="text-decoration: none;" href="./index.html">
+                  <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
                 </button>
-                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./arya.html">
+                  <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
                 </button>
-                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./roots.html">
+                  <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
                 </button>
-                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./vantage.html">
+                  <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                    class="me-2" alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
                 </button>
-                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./bolt.html">
+                  <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
                 </button>
-                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./nest.html">
+                  <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
                 </button>
-                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./waves.html">
+                  <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
                 </button>
-                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./watch.html">
+                  <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
                 </button>
-                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 6.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./hive.html">
+                  <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
                 </button>
-                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1" style="background: rgba(0, 0, 0, 0);"><img
-                    src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./wings.html">
+                  <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
                 </button>
+                </a>
               </div>
             <div class="navi text-center d-flex align-items-center pe-3 ps-3">
                 <i id="btnright" style="cursor: pointer; color: #92c1fa; font-size: 40px;"
@@ -249,9 +279,9 @@
     <section class="Details pt-3 pb-3" id="Details" style="background-color: #cdeefb;">
         <div class="container">
             <div class="row">
-                <h2 class="display-4  text-start pb-3" style="color: #017bcb;">Common platform for information & operations handling</h2>
+                <h2 class="display-4  text-center mt-3" style="color: #017bcb;">Common platform for information & operations handling</h2>
                 <div class="col-lg-6 col-12 p-4">
-                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    <p class="m-0" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
                         voluptates sequi nisi
                         commodi numquam deleniti ex debitis, corporis blanditiis recusandae minima? Esse optio quidem,
                         consectetur modi est
@@ -261,7 +291,7 @@
                         quod laudantium minus eligendi.</p>
                 </div>
                 <div class="col-lg-6 col-12 p-4">
-                    <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+                    <p  style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
                         velit quidem
                         exercitationem provident hic aperiam, ipsam ad. Quam, itaque asperiores hic impedit architecto
                         numquam beatae deleniti
@@ -290,14 +320,14 @@
                                 <i class="fas fa-angle-right"></i>
                             </a>
                         </div>
-                        <div class="col-2 d-lg-flex d-none justify-content-center align-items-center">
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
                             <a class="btn btn-primary mb-3 me-1"
                                 style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
                                 href="#carouselExampleIndicators2" role="button" data-slide="prev">
                                 <i class="fas fa-angle-left"></i>
                             </a>
                         </div>
-                        <div class="col-lg-8 col-12">
+                        <div class="col-lg-10 col-12">
                             <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -309,7 +339,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 480px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">Eliminates duplication of data and functions, in the Digital Transformation journey
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">Eliminates duplication of data and functions, in the Digital Transformation journey
 
                                                     </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE is a functional framework designed to revolutionize operations and enhance customer experiences. With a range of powerful modules, VANTAGE enables seamless single sign-on, robust authentication, data management, advanced reporting, and efficient communication channels. Embrace VANTAGE and elevate your operations to new heights.
@@ -325,7 +355,7 @@
                                                 </div>
                                                 
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">Streamlining operations for the Digital Era</h4>
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">Streamlining operations for the Digital Era</h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE is a cutting-edge framework that streamlines operations, enhances security, and delivers exceptional customer experiences. VANTAGE enables seamless authentication, efficient data management, comprehensive reporting, and effective communication channels, ensuring that you stay at the forefront of digital transformation.
                                                     </p>
                                                 </div>
@@ -342,7 +372,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 480px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Point - Single Sign-On and MFA </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Point offers a secure authentication experience for both employees and customers. With single sign-on capabilities, users can access multiple applications with a single login. The module also provides robust multi-factor authentication methods, ensuring security and compliance.
  
@@ -358,7 +388,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Blocks - Parameter Management </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Blocks enables you to manage and configure parameters efficiently; from transaction limits to user permissions, VANTAGE Block allows you to define and customize parameters based on their unique requirements, providing granular control and flexibility.
 
@@ -377,7 +407,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 480px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Lake - Data Lake for Transaction Management  </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Lake serves as a centralized repository for transactional data, encompassing various payment systems such as NACH, Cheques, UPI, IMPS, and Wires. With VANTAGE Lake, you can efficiently store, analyze, and access transactional data, gaining valuable insights on customer behavior and habits.
 
@@ -391,7 +421,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Index - Customer Information File </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Index acts as a comprehensive customer information repository, consolidating and organizing customer data required for different functions from various sources. All applications can easily access the single source and version of the customer details.
 
@@ -411,7 +441,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 480px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Post - Communication Channels </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Post provides a unified platform for seamless communication through SMS, email, and application messages. All products and applications can send and receive notifications, alerts, and updates to customers through Vantage Post.
 
@@ -426,7 +456,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Stock: - Asset Management</h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Stock is a common platform for shares, collateral management, fixed assets management and inventory management. Stock helps you gain real-time visibility, optimize utilization, and track assets and inventory throughout their lifecycle.
                                                     </p>
@@ -444,7 +474,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 480px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Reports - Advanced Reporting </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Reports offers powerful report capabilities, ranging from creating ad hoc reporting, calling predefined reports, accessing archived reports through the user defined cabinet structure or through queries. VANTAGE Reports also provides an application-based view.
 
@@ -459,7 +489,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Documents - Document Management </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Documents streamlines document management processes, allowing you to securely store, organize, and retrieve essential documents; from customer contracts to signature cards, VANTAGE Documents ensures easy access and efficient document handling, reducing manual efforts and improving compliance through published APIs and through a user-friendly screen.
 
@@ -479,7 +509,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 480px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         VANTAGE Console - Centralized Control </h4>
                                                     <p class="card-text" style="text-align: justify;">VANTAGE Console serves as a centralized control system, providing you with a holistic view of your operations and modules within the VANTAGE framework. It offers comprehensive administration, monitoring, and configuration capabilities, ensuring smooth management of the entire VANTAGE ecosystem.
 
@@ -495,7 +525,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #017bcb;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
                                                         Unlock the Power of VANTAGE </h4>
                                                     <p class="card-text" style="text-align: justify;">Join leading banks worldwide in embracing VANTAGE and revolutionize your banking operations. Seamlessly authenticate users, efficiently manage parameters and data, communicate effectively, and generate insightful reports. Contact us today to learn more about VANTAGE and how it can transform your bank's digital capabilities.
 
@@ -510,7 +540,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2 d-lg-flex d-none justify-content-center align-items-center">
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
                             <a class="btn btn-primary mb-3"
                                 style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
                                 href="#carouselExampleIndicators2" role="button" data-slide="next">
