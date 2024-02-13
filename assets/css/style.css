@@ -19,7 +19,7 @@ body {
 }
 .overlay_text{
   position: absolute;
-  top: 8%;
+  top: 100px;
     right: 10%;
 }
 .navbar-toggler-icon {
