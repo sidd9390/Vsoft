@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63;">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63; position: fixed; z-index: 10; width: 100%;">
         <div class="container m-0">
             <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -57,7 +57,7 @@
     </nav>
     <div id="carouselExampleIndicators" class="carousel slide">
 
-        <div class="carousel-indicators p-1 m-0" style="background: rgba( 0, 0, 0, 0.75 );">
+        <div class="carousel-indicators p-1 mb-5 ms-0 w-100" style="background: rgba( 0, 0, 0, 0.75 );">
             <button type="button" data-bs-target="#carouselExampleIndicators" id="button1" data-bs-slide-to="0"
                 class="active d-none" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" id="button2" data-bs-slide-to="1"
@@ -83,46 +83,76 @@
                     class="fa-solid fa-caret-left"></i>
             </div>
             <div class="img-indi d-flex">
-                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                <a  style="text-decoration: none;" href="./index.html">
+                  <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
                 </button>
-                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./arya.html">
+                  <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
                 </button>
-                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./roots.html">
+                  <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
                 </button>
-                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./vantage.html">
+                  <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                    class="me-2" alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
                 </button>
-                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./bolt.html">
+                  <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
                 </button>
-                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./nest.html">
+                  <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
                 </button>
-                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./waves.html">
+                  <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
                 </button>
-                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./watch.html">
+                  <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
                 </button>
-                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 me-2"
-                  style="background: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 6.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./hive.html">
+                  <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
                 </button>
-                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1" style="background: rgba(0, 0, 0, 0);"><img
-                    src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px;" class="pe-2" alt="">
+                </a>
+                <a  style="text-decoration: none;" href="./wings.html">
+                  <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
                   <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
                 </button>
+                </a>
               </div>
             <div class="navi text-center d-flex align-items-center pe-3 ps-3">
                 <i id="btnright" style="cursor: pointer; color: #92c1fa; font-size: 40px;"
@@ -249,10 +279,10 @@
     <section class="Details pt-3 pb-3" id="Details" style="background-color: #d1d7e0;">
         <div class="container">
             <div class="row">
-                <h2 class="display-4  text-start pb-3" style="color: #193764;">Experience the Power of WAVES
+                <h2 class="display-4  text-center m-3" style="color: #193764;">Experience the Power of WAVES
                 </h2>
                 <div class="col-lg-6 col-12 p-4">
-                    <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
+                    <p class="m-0" style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
                         voluptates sequi nisi
                         commodi numquam deleniti ex debitis, corporis blanditiis recusandae minima? Esse optio quidem,
                         consectetur modi est
@@ -262,7 +292,7 @@
                         quod laudantium minus eligendi.</p>
                 </div>
                 <div class="col-lg-6 col-12 p-4">
-                    <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+                    <p class="m-0" style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
                         velit quidem
                         exercitationem provident hic aperiam, ipsam ad. Quam, itaque asperiores hic impedit architecto
                         numquam beatae deleniti
@@ -272,7 +302,7 @@
                         vitae, ipsa modi enim expedita explicabo.</p>
                 </div>
             </div>
-            <!-- <h2 class="mb-3 display-6 fw-bold">Key Features: </h2> -->
+            <!-- <h2 class="mb-3 display-6 text-center">Key Features: </h2> -->
 
             <section class="pt-2 pb-3">
                 <div class="container">
@@ -291,18 +321,18 @@
                                 <i class="fas fa-angle-right"></i>
                             </a>
                         </div>
-                        <div class="col-2 d-lg-flex d-none justify-content-center align-items-center">
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
                             <a class="btn btn-primary mb-3 me-1"
                                 style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
                                 href="#carouselExampleIndicators2" role="button" data-slide="prev">
                                 <i class="fas fa-angle-left"></i>
                             </a>
                         </div>
-                        <div class="col-lg-8 col-12">
+                        <div class="col-lg-10 col-12">
                             <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <h2 class="mb-3 display-6 fw-bold" style="color: antiquewhite;">.</h2>
+                                        <h2 class="mb-3 display-6 text-center" style="color: antiquewhite;">.</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -311,7 +341,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Effortless Cheque Truncation</h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES is an advanced Cheque Truncation System (CTS) for financial institutions, streamlining cheque processing with features like outward, inward, and returns processing. It includes AI for CAR LAR capture and rejects fixing, along with modules for data entry, verification, remote deposit capture, web branch capture, merchant capture, positive pay, and DEM data exchange for NPCI file transfer.
 
@@ -326,7 +356,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Transforming Cheque Truncation</h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES is a powerful Cheque Truncation System that revolutionizes cheque processing, enabling financial institutions to optimize their operations. WAVES automates the capture, verification, and truncation of cheques, improving efficiency, accuracy, and fraud detection, while providing a seamless integration with your existing CBS (Core Banking System) for real-time account information and signature verification.
 
@@ -338,7 +368,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Features and Benefits</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -347,7 +377,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Outward Cheque Processing </h4>
                                                     <p class="card-text" style="text-align: justify;">Simplify the processing of outward cheques with WAVES. Capture and validate cheque images, perform data entry, and process the cheques seamlessly, ensuring faster clearing and settlement.
 
@@ -361,7 +391,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Inward Cheque Processing </h4>
                                                     <p class="card-text" style="text-align: justify;">Efficiently handle inward cheques with WAVES. Capture cheque images, perform data entry and correction, and seamlessly integrate with your CBS to access account details, status, and signatures, enabling accurate and quick processing.
 
@@ -371,7 +401,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Features and Benefits</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -380,7 +410,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Inward Returns </h4>
                                                     <p class="card-text" style="text-align: justify;">Streamline the processing of inward return cheques with WAVES. Automatically identify and process return cheques, facilitating quick reconciliation and minimizing delays in the clearing process.
 
@@ -395,7 +425,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Outward Returns </h4>
                                                     <p class="card-text" style="text-align: justify;">Manage outward return cheques effortlessly with WAVES. Automate the processing and reconciliation of return cheques, enabling faster resolution and minimizing errors in the return process.
 
@@ -406,7 +436,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Features and Benefits </h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits </h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -415,7 +445,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         AI-based CAR LAR Capture</h4>
                                                     <p class="card-text" style="text-align: justify;">Leverage advanced artificial intelligence (AI) capabilities to automatically capture and extract CAR (Courtesy Amount Recognition) and LAR (Legal Amount Recognition) information from cheque images. Enhance accuracy and efficiency in cheque processing.
 
@@ -430,7 +460,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         AI to Fix Rejects</h4>
                                                     <p class="card-text" style="text-align: justify;">Utilize AI-driven functionality to automatically identify and rectify rejected cheques. Minimize manual intervention and streamline the exception handling process, ensuring smooth cheque processing operations.
 
@@ -441,7 +471,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Features and Benefits </h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Features and Benefits </h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -450,7 +480,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Data Entry and Data Correction</h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES provides comprehensive modules for data entry and correction, enabling accurate and efficient entry of cheque information. Correct any inaccuracies and ensure data integrity.
 
@@ -466,7 +496,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         L1 and L2 Verification</h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES offers robust L1 (Level 1) and L2 (Level 2) verification modules to ensure the accuracy and authenticity of cheque details. Verify signatures, account details, and other critical information for enhanced fraud detection.
 
@@ -477,7 +507,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Modules</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Modules</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -487,7 +517,7 @@
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
                                                     
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">Remote Deposit Capture </h4>
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">Remote Deposit Capture </h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES enables remote deposit capture, allowing customers to conveniently scan and submit cheques for deposit remotely. Enhance customer convenience and accelerate cheque processing.
 
 
@@ -505,7 +535,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">Web Branch Capture </h4>
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">Web Branch Capture </h4>
                                                     <p class="card-text" style="text-align: justify;">Empower branch staff with WAVES' web branch capture module. Capture cheque images, perform data entry, and seamlessly integrate with your CBS for real-time information, improving operational efficiency.
 
 
@@ -515,7 +545,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Modules</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Modules</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -524,7 +554,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Merchant Capture </h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES facilitates cheque capture at merchant locations, streamlining the processing, reducing transportation costs, and improving cash flow for merchants.
 
@@ -538,7 +568,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">Positive Pay</h4>
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">Positive Pay</h4>
                                                     <p class="card-text" style="text-align: justify;">Implement positive pay functionality with WAVES. Match issued cheque details with presented cheques to detect and prevent cheque fraud, minimizing the risk of unauthorized transactions.
 
 
@@ -548,7 +578,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h2 class="mb-3 display-6 fw-bold">Key Modules</h2>
+                                        <h2 class="mb-3 display-6 text-center">Key Modules</h2>
                                         <div class="row d-flex justify-content-center m-0">
                                             <div class="col-lg-5 m-4 card p-0"
                                                 style="border-radius: 15px; border-top: 6px solid #193764; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
@@ -557,7 +587,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         DEM Data Exchange Module </h4>
                                                     <p class="card-text" style="text-align: justify;">WAVES seamlessly integrates with the DEM data exchange module for secure file transfer with the National Payments Corporation of India (NPCI), ensuring compliance and efficient data exchange.
                                                     </p>
@@ -570,7 +600,7 @@
                                                         style="width: 100px;" alt="">
                                                 </div>
                                                 <div class="card-body p-4" style="height: 400px;">
-                                                    <h4 class="card-title display-6 fs-2" style="color: #193764;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #193764;">
                                                         Streamline Cheque Truncation with WAVES </h4>
                                                     <p class="card-text" style="text-align: justify;">Join leading financial institutions in leveraging WAVES to simplify cheque processing, enhance fraud detection, and accelerate clearing and settlement. Contact us today to learn more about WAVES and how it can transform your cheque truncation operations.
                                                     </p>
@@ -581,7 +611,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2 d-lg-flex d-none justify-content-center align-items-center">
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
                             <a class="btn btn-primary mb-3"
                                 style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
                                 href="#carouselExampleIndicators2" role="button" data-slide="next">
