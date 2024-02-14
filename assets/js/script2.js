@@ -29,23 +29,6 @@ function handleButtonClick9(){
     document.getElementById("button10").click();
 }
 
-let scrollContainer = document.querySelector(".img-indi");
-let btnLeft = document.getElementById("btnleft");
-let btnRight = document.getElementById("btnright");
-
-scrollContainer.addEventListener("wheel", (evt) =>{
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
-    scrollContainer.style.scrollBehavior = "auto";
-})
-btnRight.addEventListener("click",()=>{
-    scrollContainer.style.scrollBehavior ="smooth";
-    scrollContainer.scrollLeft += 280
-})
-btnLeft.addEventListener("click",()=>{
-    scrollContainer.style.scrollBehavior ="smooth";
-    scrollContainer.scrollLeft -= 280
-})
 document.addEventListener('DOMContentLoaded', function () {
     var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
         interval: false // Set interval to false to prevent auto-sliding

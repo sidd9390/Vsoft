@@ -97,3 +97,35 @@ backdrop-filter: blur( 0px );
 
 }
   
+.scrolling-navigation {
+  background-color: rgba( 0, 0, 0, 0.75 );
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+.slider:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.carousel-indicators button {
+  display: inline-block;
+  margin: 10px;
+  text-indent: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #0000ff;
+  color: #0000ff;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+
+
+
