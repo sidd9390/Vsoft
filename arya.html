@@ -9,6 +9,62 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      #scrollSection {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.75);
+        overflow-x: hidden;
+        width: 100vw;
+        /* Ensures the section takes up the full viewport width */
+      }
+    
+      .scroller {
+        overflow: hidden;
+        /* Hides any content that overflows the container */
+      }
+    
+      .scroller__inner {
+        display: flex;
+        /* Ensures all buttons stay in a single line */
+      }
+    
+      .custom-carousel {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+      }
+    
+      .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+    
+      .carousel-slide {
+        flex: 0 0 100%;
+      }
+    
+      .custom-carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+    
+      .custom-carousel-indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #999;
+        margin: 0 5px;
+      }
+    
+      .custom-carousel-indicator.active {
+        background-color: #333;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1"
@@ -47,225 +103,244 @@
         </div>
       </div>
     </nav>
-    <div id="carouselExampleIndicators" class="carousel slide">
-    
-      <div class="carousel-indicators p-1 mb-5 ms-0 w-100" style="background-color: rgba( 0, 0, 0, 0.75 );">
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button1" data-bs-slide-to="0"
-          class="active d-none" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button2" data-bs-slide-to="1" class="d-none"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button3" data-bs-slide-to="2" class="d-none"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button4" data-bs-slide-to="3" class="d-none"
-          aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button5" data-bs-slide-to="4" class="d-none"
-          aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button6" data-bs-slide-to="5" class="d-none"
-          aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button7" data-bs-slide-to="6" class="d-none"
-          aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button8" data-bs-slide-to="7" class="d-none"
-          aria-label="Slide 8"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button9" data-bs-slide-to="8" class="d-none"
-          aria-label="Slide 9"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" id="button10" data-bs-slide-to="9" class="d-none"
-          aria-label="Slide 10"></button>
-        <div class="navi text-center d-flex align-items-center pe-3 ps-3">
-          <i id="btnleft" style="cursor: pointer; color: #92c1fa; font-size: 40px;" class="fa-solid fa-caret-left"></i>
-        </div>
-        <div class="img-indi d-flex">
-          <a  style="text-decoration: none;" href="./index.html">
-            <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./arya.html">
-            <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./roots.html">
-            <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./vantage.html">
-            <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
-              class="me-2" alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./bolt.html">
-            <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./nest.html">
-            <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./waves.html">
-            <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./watch.html">
-            <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./hive.html">
-            <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
-          </button>
-          </a>
-          <a  style="text-decoration: none;" href="./wings.html">
-            <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1"
-            style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
-              alt="">
-            <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
-          </button>
-          </a>
-        </div>
-        <div class="navi text-center d-flex align-items-center pe-3 ps-3">
-          <i id="btnright" style="cursor: pointer; color: #92c1fa; font-size: 40px;" class="fa-solid fa-caret-right"></i>
-        </div>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/2517-01.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-8 col-12 text-center">
-                <img src="./assets/Images/Logo Proper.png" class="img-fluid" style="width: 600px;" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item active" style="position: relative;">
-          <img src="./assets/Images/Arya 3.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
+    <div class="custom-carousel">
+      <div class="carousel-container">
+        
+        <div class="carousel-slide" style="position: relative;">
+          <video controls loop autoplay muted class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <source src="./assets/Images/Roots 30sec film-.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- <div class="overlay_text">
             <div class="row d-flex justify-content-center">
               <div class="col-8 text-center">
-                <a style="cursor: pointer;" href="./Arya.html">
-                  <img src="./assets/Images/Arya more red.png" class="img-fluid res_image" style="height: 150px;" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Roots 1.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./roots.html"><img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="height: 150px;" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Vantage 1.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;"
-            alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./vantage.html">
-                  <img src="./assets/Images/vantage.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                <a href="./roots.html">
+                  <img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt="">
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Bolt 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./bolt.html">
-                  <img src="./assets/Images/bolt.png" class="img-fluid res_image" style="width: 500px;" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Nest 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./nest.html"><img src="./assets/Images/nest final.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/waves 7.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./waves.html">
-                  <img src="./assets/Images/Waves Final Feb 3.png" class="img-fluid res_image" style="width: 500px;" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Watch 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./watch.html">
-                  <img src="./assets/Images/watch dark.png" class="img-fluid res_image" style="width: 500px;" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Hive 8.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./hive.html">
-                  <img src="./assets/Images/hive_logo.png" class="img-fluid res_image" style="width: 500px;" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" style="position: relative;">
-          <img src="./assets/Images/Wings.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
-          <div class="overlay_text">
-            <div class="row d-flex justify-content-center">
-              <div class="col-8 text-center">
-                <a href="./wings.html">
-                  <img src="./assets/Images/wings dark logo.png" class="img-fluid res_image" style="width: 500px;" alt="">
-                </a>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
+    <section class="mb-lg-4 mb-2" id="scrollSection">
+        <div class="scroller" data-direction="left" data-speed="slow">
+          <div class="scroller__inner pt-1 pb-1">
+            <div class="img-indi d-flex">
+              <a style="text-decoration: none;" href="./index.html">
+                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./arya.html">
+                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./roots.html">
+                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./vantage.html">
+                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./bolt.html">
+                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./nest.html">
+                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./waves.html">
+                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./watch.html">
+                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./hive.html">
+                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./wings.html">
+                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./index.html">
+                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./arya.html">
+                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./roots.html">
+                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./vantage.html">
+                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./bolt.html">
+                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./nest.html">
+                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./waves.html">
+                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./watch.html">
+                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./hive.html">
+                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./wings.html">
+                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./index.html">
+                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./arya.html">
+                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./roots.html">
+                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./vantage.html">
+                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./bolt.html">
+                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./nest.html">
+                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./waves.html">
+                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./watch.html">
+                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./hive.html">
+                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./wings.html">
+                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+              </a>
+            </div>
+          </div>
+      </div>
+    </section>
     <section class="Details pt-3 pb-3" id="Details" style="background-color: #fdf2ed;">
         <div class="container">
             <div class="row">
@@ -522,6 +597,7 @@
             
             </section>
             <!-- Include jQuery from a CDN -->
+    <script src="./assets/js/script2.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
