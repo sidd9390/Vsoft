@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const scrollers = document.querySelectorAll(".scroller");
 
-// If a user hasn't opted in for recuded motion, then we add the animation
+// If a user hasn't opted in for reduced motion, then we add the animation
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
@@ -61,8 +61,23 @@ function addAnimation() {
       duplicatedItem.setAttribute("aria-hidden", true);
       scrollerInner.appendChild(duplicatedItem);
     });
+
+    // Add event listeners for hover
+    scroller.addEventListener("mouseenter", pauseAnimation);
+    scroller.addEventListener("mouseleave", resumeAnimation);
   });
 }
+
+function pauseAnimation(event) {
+  const scrollerInner = event.currentTarget.querySelector(".scroller__inner");
+  scrollerInner.style.animationPlayState = "paused";
+}
+
+function resumeAnimation(event) {
+  const scrollerInner = event.currentTarget.querySelector(".scroller__inner");
+  scrollerInner.style.animationPlayState = "running";
+}
+
 
 
 document.getElementById("scrollSection").addEventListener(
@@ -74,6 +89,47 @@ document.getElementById("scrollSection").addEventListener(
   },
   { passive: false }
 );
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselContainer = document.querySelector(
+    ".custom-carousel .carousel-container"
+  );
+  const slides = document.querySelectorAll(".custom-carousel .carousel-slide");
+  const indicatorsContainer = document.querySelector(
+    ".custom-carousel .custom-carousel-indicators"
+  );
+  const indicators = [];
+
+  // Create indicators
+  slides.forEach(() => {
+    const indicator = document.createElement("div");
+    indicator.classList.add("custom-carousel-indicator");
+    indicators.push(indicator);
+    indicatorsContainer.appendChild(indicator);
+  });
+
+  // Function to indicate current slide
+  function indicateCurrentSlide(index) {
+    indicators.forEach((indicator, idx) => {
+      if (idx === index) {
+        indicator.classList.add("active");
+      } else {
+        indicator.classList.remove("active");
+      }
+    });
+  }
+
+  // Auto slide every 5 seconds
+  let currentSlide = 0;
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    indicateCurrentSlide(currentSlide);
+  }, 5000);
+});
+
+  
 
 
 
